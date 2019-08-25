@@ -1,21 +1,252 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="headContent">
+  <div class="row">
+    <!-- head -->
+    <div class="col-3 icon m-t-15r">
+      <img class="m-l-100r" src="./assets/Group 33@3x.png" alt="" srcset="">
+    </div>
+    <div class="col-9 m-t-15r">
+      <ul class="nav justify-content-end m-r-100r">
+        <li class="nav-item">
+          <a class="nav-link" href="#">旅店介紹</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">精選客房</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">訂房流程</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">周遭景點</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- head content -->
+    <div class="col-6 p-t-45r p-l-11r">
+      <p class="thirdTitle">別再說累的像狗</p>
+      <p class="secondTitle">有時候</p>
+      <p class="secondTitle">狗過的</p>
+      <p class="secondTitle">比你爽</p>
+    </div>
+    <div class="col-6">
+      <div class="m-l-7r m-t-2r formArea">
+        <div class="row">
+          <div class="col-12">
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">入住人數</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="start">入住日期</label>
+                <input [min]="startDate" class="form-control" matInput [matDatepicker]="start"
+                  [placeholder]="startDate | date: 'yyyy/MM/dd'" (click)="start.open()">
+                <mat-datepicker [color]="'primary'" #start></mat-datepicker>
+              </div>
+              <div class="form-group">
+                <label for="end">退房日期</label>
+                <input [min]="endDate" class="form-control" matInput [matDatepicker]="end"
+                  [attr.placeholder]="endDate | date: 'yyyy/MM/dd'" (click)="end.open()">
+                <mat-datepicker [color]="'primary'" #end></mat-datepicker>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-search">搜尋</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- book process -->
+<div class="row bookProcess">
+  <div class="col-12 p-t-1r">
+    <p>汪屋 wow hostel 簡易訂房流程</p>
+  </div>
+  <div class="col-3 p-t-1r">
+    <p>
+      <img src="./assets/calendar icon@3x.png" alt="calendar" srcset="">
+    </p>
+    <p class="m-b-0">STEP1</p>
+    <p>請填寫人數和訂房日期</p>
+  </div>
+  <div class="col-3 p-t-1r">
+    <p>
+      <img src="./assets/choose room@3x.png" alt="choose room@3x" srcset="">
+    </p>
+    <p class="m-b-0">STEP2</p>
+    <p>選擇喜歡的房型</p>
+  </div>
+  <div class="col-3 p-t-1r">
+    <p>
+      <img src="./assets/mobile@3x.png" alt="mobile@3x" srcset="">
+    </p>
+    <p class="m-b-0">STEP3</p>
+    <p>填寫手機號碼</p>
+  </div>
+  <div class="col-3 p-t-1r">
+    <p>
+      <img src="./assets/notification@3x.png" alt="notification@3x" srcset="">
+    </p>
+    <p class="m-b-0">STEP4</p>
+    <p>收到手機通知，訂房成功</p>
+  </div>
+</div>
+
+<div class="row introduction">
+  <div class="col-6">
+    <a target="_blank" href="https://www.pexels.com/photo/macbook-pro-on-table-2764182/">
+      <img src="./assets/hotel1.jpg" alt="https://www.pexels.com/photo/macbook-pro-on-table-2764182/" srcset="">
+    </a>
+  </div>
+  <div class="col-6">
+    <h1>關於汪屋 wow hostel</h1>
+    <p>汪屋 wow hostel 旅店位於台北市信義區寵物友善旅店，凡是帶著寵物入住的客戶，可享合作商家優惠碼</p>
+    <p>汪屋 wow hostel 旅店希望大家有好的入住經驗！不只狗狗可以入住，貓貓也可以喔！</p>
+    <div class="text-center">
+      <button type="submit" class="btn btn-search">探索客房</button>
+    </div>
+  </div>
+</div>
+
+<div class="row featured">
+  <div class="col-12">
+    <p class="p-t-1r p-b-1r center">精選客房</p>
+  </div>
+  <div class="col-4 p-l-120">
+    <a target="_blank" href="https://www.pexels.com/photo/white-wooden-3-drawer-chest-2775320/">
+      <div class="room">
+        <div class="content">
+          <div class="row">
+            <div class="col-3">
+              <div class="start text-center">
+                <p class="center">4.5</p>
+                <span style="color:white; font-size:24px">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-9">
+              <p class="black">客房</p>
+              <p class="black small">名稱：維多莉亞僕人的房間</p>
+              <p class="black small">平日(一 ~ 四)：$ 1,890</p>
+              <p class="pink small">假日(五 ~ 日)：$ 2,500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-4 p-lr-60">
+    <a target="_blank" href="https://www.pexels.com/photo/photo-of-beige-themed-bedroom-2766345/">
+      <div class="room2">
+        <div class="content">
+          <div class="row">
+            <div class="col-3">
+              <div class="start text-center">
+                <p class="center">4.8</p>
+                <span style="color:white; font-size:24px">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-9">
+              <p class="black">客房</p>
+              <p class="black small">名稱：亞歷山大狗狗的房間</p>
+              <p class="black small">平日(一 ~ 四)：$ 30,000</p>
+              <p class="pink small">假日(五 ~ 日)：$ 45,500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-4 p-r-120">
+    <a target="_blank" href="https://www.goodfreephotos.com/united-states/new-mexico/santa-fe/la-fonda-hotel-room-in-santa-fe-new-mexico.jpg.php">
+      <div class="room3">
+        <div class="content">
+          <div class="row">
+            <div class="col-3">
+              <div class="start text-center">
+                <p class="center">4.9</p>
+                <span style="color:white; font-size:24px">
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-9">
+              <p class="black">客房</p>
+              <p class="black small">名稱：黃色調的房間</p>
+              <p class="black small">平日(一 ~ 四)：$ 10,990</p>
+              <p class="pink small">假日(五 ~ 日)：$ 40,990</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-12 text-center m-t-2r">
+    <span style="color:white; font-size:48px;">
+        <i class="fas fa-angle-down"></i>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 map">
+    <img src="./assets/map.jpg" alt="" srcset="">
+  </div>
+</div>
+
+<div class="row affirm">
+  <div class=".offset-1 col-7 m-t-1r">
+    <p>
+        <span>客戶服務</span>
+        <span>合作夥伴支援中心</span>
+        <span>Careers</span>
+        <span>隱私權和 Cookie 聲明</span>
+    </p>
+    <p>
+        <a href="https://me.me/i/de9aa9c832e543318a391d11a50452cf"><span>狗狗圖片</span></a>
+        <a href="https://janetcreativedesign.github.io/wowhostel/index.html#artboard0"><span>參考 Janet Yang 設計稿製作</span></a>
+        <span>旅館圖片點擊至來源</span>
+    </p>
+
+  </div>
+  <div class="col-4 m-t-1r">
+    <p>
+        <span>
+            <i class="far fa-copyright"></i>
+            2019 wowhostel . 版權所有
+        </span>
+    </p>
+    <p>
+      <span>
+        自學使用，如有侵權請寄送 e-mail 至 bear88130@yahoo.com.tw
+      </span>
+    </p>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
